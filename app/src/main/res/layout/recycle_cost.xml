@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ff282828">
+
+    <TextView
+        android:id="@+id/rcardName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/cardTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/cardSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/rarity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-thin"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/white" />
+</LinearLayout>

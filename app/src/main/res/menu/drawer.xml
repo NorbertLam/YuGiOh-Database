@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_search"
+            android:icon="@drawable/ic_launcher"
+            android:title="Search" />
+        <item
+            android:id="@+id/drawer_rising"
+            android:icon="@drawable/ic_launcher"
+            android:title="Rising" />
+        <item
+            android:id="@+id/drawer_falling"
+            android:icon="@drawable/ic_launcher"
+            android:title="Falling" />
+        <item
+            android:id="@+id/drawer_expensive"
+            android:icon="@drawable/ic_launcher"
+            android:title="Expensive" />
+    </group>
+</menu>

@@ -1,111 +1,100 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:fillViewport="true">
+    android:background="#ff282828"
+    android:orientation="vertical">
 
-    <FrameLayout
-        android:id="@+id/loading"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#ff282828">
+        android:background="@color/LightBlue1"
+        android:minHeight="?attr/actionBarSize" />
 
-        <ProgressBar
-            android:id="@+id/progress"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:stretchColumns="1">
+        <FrameLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff282828"
+            android:orientation="vertical">
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/LightBlue1"
-                android:minHeight="?attr/actionBarSize" />
-
-            <!--<android.support.design.widget.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabMode="scrollable" />-->
-
-            <!-- <android.support.v4.view.ViewPager
-                 android:id="@+id/viewpager"
-                 android:layout_width="match_parent"
-                 android:layout_height="0px"
-                 android:layout_weight="1"
-                 android:background="@android:color/white" />-->
-
-            <ImageView
-                android:id="@+id/cardImage1"
-                android:layout_width="match_parent"
-                android:layout_height="500px"
-                android:layout_centerHorizontal="true"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
-                android:contentDescription="Card image" />
-
-
-            <TextView
+            <ProgressBar
+                android:id="@+id/progress"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingLeft="10dp"
-                android:id="@+id/ATTView" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingLeft="10dp"
-                android:id="@+id/TypeView" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingLeft="10dp"
-                android:id="@+id/LevelView" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingLeft="10dp"
-                android:id="@+id/AtkDefView" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingLeft="10dp"
-                android:id="@+id/PropertView" />
-
-            <TextView
-                android:id="@+id/Text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center" />
 
-            <TextView
-                android:id="@+id/CardText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="5dp"
-                android:layout_gravity="center" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:stretchColumns="1">
 
-        </LinearLayout>
-    </FrameLayout>
-</ScrollView>
+                <ImageView
+                    android:id="@+id/cardImage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="500px"
+                    android:layout_centerHorizontal="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="Card image"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/ATTView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:id="@+id/TypeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:id="@+id/LevelView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:id="@+id/AtkDefView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:id="@+id/PropertView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:id="@+id/Text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/CardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>

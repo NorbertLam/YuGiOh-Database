@@ -1,15 +1,21 @@
 package com.example.norbert.yugioh.ui;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.example.norbert.yugioh.R;
+import com.example.norbert.yugioh.Utility.Network;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import butterknife.Bind;
@@ -31,7 +37,11 @@ public abstract class BaseCardListFragment extends Fragment {
 
         bindViews(view);
         setUpItems();
-        loadCards();
+        if (Network.isNetworkConnected(getActivity()) == true) {
+            loadCards();
+        } else {
+            Snackbar.make(view, "Cannot connect to network.", Snackbar.LENGTH_LONG).show();
+        }
         setUpDetails();
 
         return view;

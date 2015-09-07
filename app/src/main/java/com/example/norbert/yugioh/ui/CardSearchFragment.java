@@ -1,7 +1,11 @@
 package com.example.norbert.yugioh.ui;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -16,6 +20,7 @@ import android.widget.ProgressBar;
 
 import com.example.norbert.yugioh.Client.models.YGOApiImpli;
 import com.example.norbert.yugioh.R;
+import com.example.norbert.yugioh.Utility.Network;
 import com.example.norbert.yugioh.adapters.CardAdapter;
 
 import java.util.List;
@@ -51,7 +56,13 @@ public class CardSearchFragment extends Fragment {
 
         mProgress.setVisibility(View.VISIBLE);
 
-        loadCards();
+        if(Network.isNetworkConnected(getActivity()) == true) {
+            loadCards();
+        }
+        else {
+            Snackbar.make(view, "Cannot connect to network.", Snackbar.LENGTH_LONG).show();
+        }
+
         setUpSearch();
         setUpOnClick();
 
